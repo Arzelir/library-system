@@ -26,6 +26,7 @@ class library_home{
             sign.logIn(username, password);
         }
 
+        //created options setting for administrators
         if(signInValue = true){
             administrator.adminOptions();
         }
