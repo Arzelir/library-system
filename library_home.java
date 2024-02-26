@@ -34,5 +34,7 @@ class library_home{
         else{
         visit.options();
     }
+
+    obj.close();
     }
 }

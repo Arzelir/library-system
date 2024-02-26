@@ -13,6 +13,7 @@ public class visitor {
             case "search":
                 System.out.println("Enter Search");
                 String search = obj.next();
+                System.out.println(search + " is currently not in stock, we don't have any books :/");
                 break;
             case "sign out a book":
                 System.out.println("Please enter barcode number");
