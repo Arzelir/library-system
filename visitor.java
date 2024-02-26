@@ -19,6 +19,9 @@ public class visitor {
                 System.out.println("Please enter barcode number");
                 System.out.println("");
                 break;
+            case "Place hold on book":
+                System.out.println("What book would you like to put on hold?");
+                break;
             case "leave":
                 System.out.println("Thank you, have a nice day");
         }       

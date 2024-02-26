@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import javax.swing.*;
+import java.awt.event.*;
+
 
 class library_home{
 
@@ -6,7 +9,23 @@ class library_home{
     void homePage(boolean signinCheck){
         signInValue = signinCheck;
     }
+
     public static void main(String[] args) {
+
+        JFrame frame = new JFrame();
+        JPanel panel = new JPanel();
+        JButton signinButton = new JButton();
+        signinButton.setText("Enter");
+        signinButton.setBounds(200, 80, 50, 20);
+        JTextField signinField = new JTextField(20);
+        signinField.setBounds(200, 50, 50, 20);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 500);
+        frame.setTitle("Home Page");
+        frame.setVisible(true);
+        frame.add(panel);
+        panel.add(signinField);
+        panel.add(signinButton);
 
         //imported classes objects
         Scanner obj = new Scanner(System.in);
