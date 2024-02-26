@@ -15,7 +15,8 @@ public class visitor {
                 String search = obj.next();
                 break;
             case "sign out a book":
-                System.out.println("Please Use Scanner Below");
+                System.out.println("Please enter barcode number");
+                System.out.println("");
                 break;
             case "leave":
                 System.out.println("Thank you, have a nice day");
