@@ -4,9 +4,9 @@ public class admin {
 
     Scanner obj = new Scanner(System.in);
 
-    String options;
+    String options, username, password;
 
-    create_account accountInfo = new create_account;
+    account_center accountInfo = new account_center();
 
     protected void adminOptions(){
         System.out.println("What would you like to do? \n 1) Create/Remove account \n 2) Add/Remove books \n 3) Check book information");
@@ -16,8 +16,10 @@ public class admin {
         switch (options.toLowerCase()){
             case "create account":
                 System.out.println("Please enter account information");
+                username = obj.next();
+                password = obj.next();
 
-
+                accountInfo.createAccount(username, password);
 
             break;
             case "remove account":

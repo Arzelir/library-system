@@ -5,6 +5,12 @@ class signin {
 //creating objects
 Scanner obj = new Scanner(System.in);
 library_home home = new library_home();
+account_center accounts = new account_center();
+
+// get and set methods
+void setAccountNames(String username, String password){
+
+}
 
 //created private variables
 private String usernameCheck = "yaseen", passwordCheck = "qazi";
