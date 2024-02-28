@@ -2,15 +2,24 @@ import java.util.HashMap;
 
 public class account_center {
 
-    HashMap<String, String> accountNames = new HashMap<String, String>();
+    static HashMap<String, String> accountNames = new HashMap<String, String>();
 
-    signin checkAccount = new signin();
+    library_home home = new library_home();
 
-    checkAccount.setAccountNames();
-    
-    void createAccount(String username, String password){
+
+    void checkAccountNames(String username){
         accountNames.put("yaseen", "qazi");
-        System.out.println(username + password);
+        accountNames.get(username);        
+        home.homePage(true);
     }
 
+    void addAccounts(String username, String password){
+        accountNames.put(username, password);
+        System.out.println("Account Successfully Added");
+    }
+
+    void removeAccounts(String username, String password){
+        accountNames.remove(username, password);
+        System.out.println("Account successfully Removed");
+    }
 }
