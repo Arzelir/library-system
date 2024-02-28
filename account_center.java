@@ -6,20 +6,23 @@ public class account_center {
 
     library_home home = new library_home();
 
-
-    void checkAccountNames(String username){
+    void checkAccountNames(String username) {
         accountNames.put("yaseen", "qazi");
-        accountNames.get(username);        
+        accountNames.get(username);
         home.homePage(true);
     }
 
-    void addAccounts(String username, String password){
+    void addAccounts(String username, String password) {
         accountNames.put(username, password);
         System.out.println("Account Successfully Added");
     }
 
-    void removeAccounts(String username, String password){
-        accountNames.remove(username, password);
-        System.out.println("Account successfully Removed");
+    void removeAccounts(String username, String password) {
+        if (accountNames.containsKey(username)) {
+            accountNames.remove(username, password);
+            System.out.println("Account successfully Removed");
+        } else {
+            System.out.println("Account does not exist");
+        }
     }
 }
