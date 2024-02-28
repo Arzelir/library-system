@@ -18,7 +18,7 @@ class library_home{
         String username, password;
 
         //Sign in pages
-        System.out.println("Admin or Visitor? \n");
+        System.out.println("Welcome to the Public Library! \nAdmin or Visitor? \n");
         String response = obj.next();
         if(response.toLowerCase().equals("admin")){
             System.out.println("Please enter username and password");
