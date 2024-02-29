@@ -5,7 +5,7 @@ public class visitor {
     //Define Scanner Object
     Scanner obj = new Scanner(System.in);
 
-    void options(){
+     public void options(){
         System.out.println("What would you like to do? \n a) Search \n b) Sign out a book \n c) Leave");
         String response = obj.nextLine();
         response = response.toLowerCase();
