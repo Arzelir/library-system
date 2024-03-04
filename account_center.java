@@ -2,27 +2,30 @@ import java.util.HashMap;
 
 public class account_center {
 
-    static HashMap<String, String> accountNames = new HashMap<String, String>();
+    // declaring hashmap to store usernames and passwords
+    HashMap<String, String> accountNames = new HashMap<String, String>();
+    admin administrator = new admin();
 
-    library_home home = new library_home();
+    // creating username and password variables
+    String username, password;
 
-    void checkAccountNames(String username) {
-        accountNames.put("yaseen", "qazi");
-        accountNames.get(username);
-        home.homePage(true);
+    // creating setter method
+    public void setAccount(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
-    void addAccounts(String username, String password) {
-        accountNames.put(username, password);
-        System.out.println("Account Successfully Added");
+    // creating getter method
+    public void getAccount() {
+        if(this.accountNames.containsKey(this.username)){
+            if (this.accountNames.get(this.username) == this.password) {
+                administrator.adminOptions();
+            }
+            }
     }
 
-    void removeAccounts(String username, String password) {
-        if (accountNames.containsKey(username)) {
-            accountNames.remove(username, password);
-            System.out.println("Account successfully Removed");
-        } else {
-            System.out.println("Account does not exist");
-        }
+    public void addAccounts(){
+        System.out.println(this.username + " " + this.password);
     }
+
 }
