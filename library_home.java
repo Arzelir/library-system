@@ -19,13 +19,13 @@ class library_home {
         signin sign = new signin();
 
         // make this private somehow
-        accounts.setAccount("yaseen", "qazi");
+        accounts.addAccount("yaseen", "qazi");
 
         // Sign in pages
         System.out.println("Welcome to the Public Library! \nAdmin or Visitor? \n");
         String response = obj.next();
 
-        switch (response) {
+        switch (response.toLowerCase()) {
             case "admin":
                 sign.logIn();
                 break;
