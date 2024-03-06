@@ -2,12 +2,6 @@ import java.util.Scanner;
 
 class signin {
 
-    // clear screen method
-    public static void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-
     // creating objects
     account_center accounts = new account_center();
     Scanner obj = new Scanner(System.in);
