@@ -9,6 +9,10 @@ public class account_center {
     // creating username and password variables
     String username, password;
 
+    public void addAccount(String username, String password){
+        accountNames.put(username, password);
+    }
+
     // creating setter method
     public void setAccount(String username, String password) {
         this.username = username;
@@ -17,15 +21,7 @@ public class account_center {
 
     // creating getter method
     public void getAccount() {
-        if(this.accountNames.containsKey(this.username)){
-            if (this.accountNames.get(this.username) == this.password) {
-                administrator.adminOptions();
-            }
-            }
+        System.out.println("This method works");
+        System.out.println(accountNames.get("yaseen"));
     }
-
-    public void addAccounts(){
-        System.out.println(this.username + " " + this.password);
-    }
-
 }
